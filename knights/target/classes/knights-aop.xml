@@ -17,18 +17,18 @@
   <bean id="minstrel" 
      class="com.springinaction.knights.Minstrel" /> <!--<co id="co_minstrel_bean"/>-->
     
-  <aop:config>
-    <aop:aspect ref="minstrel">
+  <!--<aop:config>-->
+    <!--<aop:aspect ref="minstrel">-->
+	<!-- -->
+      <!--<aop:pointcut id="embark" -->
+          <!--expression="execution(* *.embarkOnQuest(..))" /> &lt;!&ndash;<co id="co_define_pointcut"/>&ndash;&gt;-->
 
-      <aop:pointcut id="embark"
-          expression="execution(* *.embarkOnQuest(..))" /> <!--<co id="co_define_pointcut"/>-->
+      <!--<aop:before pointcut-ref="embark"-->
+                  <!--method="singBeforeQuest"/>    &lt;!&ndash;<co id="co_minstrel_before_advice"/>&ndash;&gt;-->
 
-      <aop:before pointcut-ref="embark"
-                  method="singBeforeQuest"/>    <!--<co id="co_minstrel_before_advice"/>-->
+      <!--<aop:after pointcut-ref="embark"-->
+                 <!--method="singAfterQuest"/>     &lt;!&ndash;<co id="co_minstrel_after_advice"/>&ndash;&gt;-->
 
-      <aop:after pointcut-ref="embark"
-                 method="singAfterQuest"/>     <!--<co id="co_minstrel_after_advice"/>-->
-
-    </aop:aspect>
-  </aop:config>
+    <!--</aop:aspect>-->
+  <!--</aop:config>  -->
 </beans>

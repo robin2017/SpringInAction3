@@ -1,12 +1,10 @@
-package com.springinaction.knights;
+package  com.springinaction.knights;
 
 public class DamselRescuingKnight implements Knight {
-  private RescueDamselQuest quest;
-  
+  private  RescueDamselQuest quest;
   public DamselRescuingKnight() {
-    quest = new RescueDamselQuest(); //<co id="co_coupledToQuest"/>
+    quest = new RescueDamselQuest();
   }
-  
   public void embarkOnQuest() throws QuestException {
     quest.embark();
   }

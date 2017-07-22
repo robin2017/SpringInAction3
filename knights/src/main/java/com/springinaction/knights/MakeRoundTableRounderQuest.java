@@ -1,4 +1,4 @@
-package com.springinaction.knights;
+package  com.springinaction.knights;
 
 public class MakeRoundTableRounderQuest implements Quest {
 
