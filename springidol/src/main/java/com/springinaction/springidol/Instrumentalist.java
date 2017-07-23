@@ -1,6 +1,9 @@
 //<start id="instrumentalist_java" /> 
 package com.springinaction.springidol;
 
+import org.springframework.stereotype.Component;
+
+@Component("kenny2")
 public class Instrumentalist implements Performer {
   public Instrumentalist() {
   }
@@ -24,9 +27,14 @@ public class Instrumentalist implements Performer {
     return song;
   }
 
+
   private Instrument instrument;
 
-  public void setInstrument(Instrument instrument) { //<co id="co_injectInstrument"/>
+  public Instrument getInstrument() {
+    return instrument;
+  }
+
+  public void setInstrument(Instrument instrument) {
     this.instrument = instrument;
   }
 }

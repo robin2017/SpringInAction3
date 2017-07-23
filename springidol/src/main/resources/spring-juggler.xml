@@ -1,73 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:p="http://www.springframework.org/schema/p"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xmlns:util="http://www.springframework.org/schema/util"
- xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+       >
+    <context:component-scan base-package="com.springinaction.springidol"/>
 
-  <!--<start id="duke_bean" />--> 
+    <context:annotation-config/>
+  <!--<start id="duke_bean" />-->
+
    <bean id="poeticDuke"
-      class="com.springinaction.springidol.PoeticJuggler" >
+      class="com.springinaction.springidol.PoeticJuggler" autowire="constructor" >
       <constructor-arg value="15"/>
-      <constructor-arg ref="sonnet29"/>
     </bean>
-    <bean id="sonnet29"
-            class="com.springinaction.springidol.Sonnet29">
-    </bean>
+    <bean id="sonnet29" class="com.springinaction.springidol.Sonnet29"/>
+
 
   <!--<end id="duke_bean" />-->
-    <bean id="theStage"
-          class="com.springinaction.springidol.Stage"
-          factory-method="getInstance"/>
+    <!--<bean id="theStage"-->
+          <!--class="com.springinaction.springidol.Stage"-->
+          <!--factory-method="getInstance"/>-->
 
-    <bean id="auditorium"
-          class="com.springinaction.springidol.Auditorium"
-          init-method="turnOnLight"
-          destroy-method="turnOffLight"/>
+    <!--<bean id="auditorium"-->
+          <!--class="com.springinaction.springidol.Auditorium"-->
+          <!--init-method="turnOnLight"-->
+          <!--destroy-method="turnOffLight"/>-->
 
-    <bean id="kenny"
-          class="com.springinaction.springidol.Instrumentalist"
-          p:song="Robin Song"
-          p:instrument-ref="saxophone"/>
+    <!--<bean id="kenny"-->
+          <!--class="com.springinaction.springidol.Instrumentalist"-->
+          <!--p:song="Robin Song"-->
+          <!--p:instrument-ref="saxophone"/>-->
 
 
     <bean id="kenny2"
           class="com.springinaction.springidol.Instrumentalist">
         <property name="song" value="Robin Song"/>
-        <property name="instrument">
-                <bean class="com.springinaction.springidol.Saxophone"/>
-        </property>
     </bean>
-
-    <bean id="hank"
-          class="com.springinaction.springidol.OneManBand">
-    <property name="instruments">
-        <list>
-            <ref bean="piano"/>
-            <ref bean="saxophone"/>
-        </list>
-    </property>
-    </bean>
-    <bean id="piano"
-          class="com.springinaction.springidol.Piano"/>
-    <bean id="saxophone"
+    <bean id="instrument"
           class="com.springinaction.springidol.Saxophone"/>
 
 
-    <util:list id="cities">
-        <bean class="com.springinaction.springidol.City"
-              p:name="nanjing" p:population="123"/>
-        <bean class="com.springinaction.springidol.City"
-              p:name="hangzhou" p:population="128"/>
-        <bean class="com.springinaction.springidol.City"
-              p:name="shanghai" p:population="523"/>
-    </util:list>
 
-    <bean id="person" class="com.springinaction.springidol.Person">
-        <property name="city" value="#{cities[2]}"/>
-        <property name="name" value="robin"/>
-    </bean>
+    <!--<bean id="hank"-->
+          <!--class="com.springinaction.springidol.OneManBand">-->
+    <!--<property name="instruments">-->
+        <!--<list>-->
+            <!--<ref bean="piano"/>-->
+            <!--<ref bean="saxophone"/>-->
+        <!--</list>-->
+    <!--</property>-->
+    <!--</bean>-->
+    <!--<bean id="piano"-->
+          <!--class="com.springinaction.springidol.Piano"/>-->
+    <!--<bean id="saxophone"-->
+          <!--class="com.springinaction.springidol.Saxophone"/>-->
+
+
+    <!--<util:list id="cities">-->
+        <!--<bean class="com.springinaction.springidol.City"-->
+              <!--p:name="nanjing" p:population="123"/>-->
+        <!--<bean class="com.springinaction.springidol.City"-->
+              <!--p:name="hangzhou" p:population="428"/>-->
+        <!--<bean class="com.springinaction.springidol.City"-->
+              <!--p:name="shanghai" p:population="523"/>-->
+    <!--</util:list>-->
+
+    <!--<bean id="person" class="com.springinaction.springidol.Person">-->
+        <!--<property name="city" value="#{cities[2]}"/>-->
+        <!--<property name="name" value="#{systemProperties['applicattion.home']}"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="bigcity"-->
+          <!--class="com.springinaction.springidol.BigCity">-->
+        <!--<property name="cityName" value="#{cities.![name+'&#45;&#45;'+population]}"/>-->
+    <!--</bean>-->
 
 
 </beans>
