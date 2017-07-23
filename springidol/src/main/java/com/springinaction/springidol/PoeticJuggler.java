@@ -1,4 +1,4 @@
-//<start id="poeticjuggler_java" /> 
+//<start id="poeticjuggler_java" />
 package com.springinaction.springidol;
 
 public class PoeticJuggler extends Juggler {
