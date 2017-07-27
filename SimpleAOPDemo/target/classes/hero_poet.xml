@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+       <bean id="hero" class="com.robin.demo.Hero"/>
+       <bean id="poet" class="com.robin.demo.Poet"/>
+       <aop:config>
+              <aop:aspect ref="poet">
+                     <aop:pointcut id="doHelpPool" expression="execution(* com.robin.demo.Hero.helpPool(..))"/>
+
+                     <aop:before
+                             pointcut-ref="doHelpPool"
+                             method="openRecord"/>
+                     <aop:after
+                             pointcut-ref="doHelpPool"
+                             method="closeRecord"/>
+              </aop:aspect>
+           <aop:aspect ref="poet">
+               <aop:pointcut id="doSaveBeauty" expression="execution(* com.robin.demo.Hero.saveBeauty(..))"/>
+
+               <aop:before
+                       pointcut-ref="doSaveBeauty"
+                       method="openRecord"/>
+               <aop:after
+                       pointcut-ref="doSaveBeauty"
+                       method="closeRecord"/>
+           </aop:aspect>
+       </aop:config>
+</beans>
