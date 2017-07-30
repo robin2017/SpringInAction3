@@ -9,7 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class InstrumentMain {
     public static void main(String[] args) throws PerformanceException {
         ApplicationContext applicationContext=
-                new ClassPathXmlApplicationContext("spring-idol.xml");
+                new ClassPathXmlApplicationContext("spring-idol-around.xml");
         Performer performer=(Performer)applicationContext.getBean("eddie");
         performer.perform();
     }

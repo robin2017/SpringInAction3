@@ -3,11 +3,11 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <bean id="hero" class="com.robin.demo.Hero"/>
-    <bean id="poet" class="com.robin.demo.Poet"/>
+    <bean id="hero" class="com.robin.xml.demo.Hero"/>
+    <bean id="poet" class="com.robin.xml.demo.Poet"/>
     <aop:config>
         <aop:aspect ref="poet">
-            <aop:pointcut id="doHelpPool" expression="execution(* com.robin.demo.Hero.helpPool(..))"/>
+            <aop:pointcut id="doHelpPool" expression="execution(* com.robin.xml.demo.Hero.helpPool())"/>
 
             <aop:before
                     pointcut-ref="doHelpPool"
@@ -18,7 +18,7 @@
         </aop:aspect>
 
         <aop:aspect ref="poet">
-            <aop:pointcut id="doSaveBeauty" expression="execution(* com.robin.demo.Hero.saveBeauty(..))"/>
+            <aop:pointcut id="doSaveBeauty" expression="execution(* com.robin.xml.demo.Hero.saveBeauty(..))"/>
 
             <aop:before
                     pointcut-ref="doSaveBeauty"

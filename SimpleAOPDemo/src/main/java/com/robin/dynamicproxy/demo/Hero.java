@@ -1,9 +1,9 @@
 /**
  * Created by robin on 2017/7/27.
  */
-package com.robin.demo;
+package com.robin.dynamicproxy.demo;
 
-public class Hero {
+public class Hero implements HeroInterface{
     public void saveBeauty(){
         System.out.println("美女，我来救你了");
     }
