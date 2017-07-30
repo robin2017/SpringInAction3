@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+        <bean id="poet" class="com.robin.sf5advice.beforeadvice_xml.Poet"/>
+       <bean id="poetbeforeadvice" class="com.robin.sf5advice.beforeadvice_xml.PoetBeforeAdvice">
+           <constructor-arg ref="poet"/>
+       </bean>
+    <bean id="poetafteradvice" class="com.robin.sf5advice.beforeadvice_xml.PoetAfterAdvice">
+        <constructor-arg ref="poet"/>
+    </bean>
+    <bean id="poetaroundadvice" class="com.robin.sf5advice.beforeadvice_xml.PoetAroundAdvice">
+        <constructor-arg ref="poet"/>
+    </bean>
+
+
+
+       <bean id="target" class="com.robin.sf5advice.beforeadvice_xml.Hero"/>
+
+       <bean id="hero" class="org.springframework.aop.framework.ProxyFactoryBean"
+             p:proxyInterfaces="com.robin.sf5advice.beforeadvice_xml.HeroInterface" p:target-ref="target"
+             p:interceptorNames="poetaroundadvice"
+             />
+
+</beans>
