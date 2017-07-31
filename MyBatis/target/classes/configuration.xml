@@ -18,7 +18,7 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="User.xml"/>
+        <mapper resource="model/User.xml"/>
     </mappers>
 </configuration>
 
