@@ -1,7 +1,7 @@
 /**
  * Created by robin on 2017/7/27.
  */
-package com.robin.xml.demo;
+package com.robin.xml.beforeafter;
 
 public class Hero {
     public void saveBeauty(){

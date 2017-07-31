@@ -7,11 +7,13 @@ import org.springframework.aop.framework.ProxyFactory;
  */
 public class Client {
     public static void main(String[] args){
+
         //建立代理工厂
         ProxyFactory proxyFactory=new ProxyFactory();
         //代理工厂中添加目标类和切面类
         proxyFactory.setTarget(new Hero());
         proxyFactory.addAdvice(new PoetBeforeAdvice(new Poet()));
+
         proxyFactory.addAdvice(new PoetAfterAdvice(new Poet()));
         proxyFactory.addAdvice(new PoetAroundAdvice(new Poet()));
 
