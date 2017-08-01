@@ -21,7 +21,7 @@ public class SpittlesAtomView extends AbstractAtomFeedView {
           Map<String, Object> model,
           HttpServletRequest request,
           HttpServletResponse response) throws Exception {
-    
+
     @SuppressWarnings("unchecked")
     List<Spittle> spittles = (List<Spittle>) model.get("spittles");
     List<Entry> entries = new ArrayList<Entry>();
@@ -32,7 +32,7 @@ public class SpittlesAtomView extends AbstractAtomFeedView {
       entry.setAuthors(asList(spittle.getSpitter().getFullName()));
       entries.add(entry);
     }
-    
+
     return entries;
   }
 }

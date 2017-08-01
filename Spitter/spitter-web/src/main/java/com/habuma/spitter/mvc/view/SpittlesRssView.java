@@ -30,7 +30,7 @@ public class SpittlesRssView extends AbstractRssFeedView {
       item.setAuthor(spittle.getSpitter().getFullName());
       items.add(item);
     }
-    
+
     return items;
   }
 
