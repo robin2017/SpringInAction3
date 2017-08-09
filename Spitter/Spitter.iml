@@ -1,5 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/spitter-persistence-jdbc-template/src/test/resources/test-transaction-context.xml</file>
+          <file>file://$MODULE_DIR$/remoting-httpinvoker/src/main/resources/remote-service-context.xml</file>
+          <file>file://$MODULE_DIR$/remoting-jaxws-standalone/src/main/resources/remote-service-context.xml</file>
+          <file>file://$MODULE_DIR$/spitter-email/src/main/resources/email-context.xml</file>
+          <file>file://$MODULE_DIR$/spitter-persistence-hibernate-contextual-sessions/src/main/resources/persistence-context.xml</file>
+          <file>file://$MODULE_DIR$/spitter-persistence-jdbc-template/src/test/resources/test-dataSource-context.xml</file>
+          <file>file://$MODULE_DIR$/lingo-rpc/src/main/resources/messaging-context.xml</file>
+          <file>file://$MODULE_DIR$/lingo-rpc/src/main/resources/messaging-client-context.xml</file>
+          <file>file://$MODULE_DIR$/remoting-hessian/src/main/resources/remote-service-context.xml</file>
+          <file>file://$MODULE_DIR$/spitter-persistence-hibernate-template/src/test/resources/test-transaction-context.xml</file>
+          <file>file://$MODULE_DIR$/spitter-persistence-jdbc-dao-support/src/main/resources/persistence-context.xml</file>
+          <file>file://$MODULE_DIR$/spitter-persistence-jpa/src/test/resources/test-dataSource-context.xml</file>
+          <file>file://$MODULE_DIR$/spitter-persistence-jpa/src/test/resources/test-transaction-context.xml</file>
+          <file>file://$MODULE_DIR$/spitter-service-programmatic-tx/src/main/resources/service-context.xml</file>
+          <file>file://$MODULE_DIR$/remoting-clients/src/main/resources/jaxrpc-client-context.xml</file>
+          <file>file://$MODULE_DIR$/remoting-clients/src/main/resources/jaxws-client-context.xml</file>
+          <file>file://$MODULE_DIR$/remoting-clients/src/main/resources/rmi-client-context.xml</file>
+          <file>file://$MODULE_DIR$/remoting-clients/src/main/resources/httpInvoker-client-context.xml</file>
+          <file>file://$MODULE_DIR$/remoting-clients/src/main/resources/hessian-client-context.xml</file>
+          <file>file://$MODULE_DIR$/remoting-clients/src/main/resources/burlap-client-context.xml</file>
+          <file>file://$MODULE_DIR$/jms-rpc/src/main/resources/messaging-client-context.xml</file>
+          <file>file://$MODULE_DIR$/remoting-rmi/src/main/resources/remote-service-context.xml</file>
+          <file>file://$MODULE_DIR$/remoting-rmi/src/main/resources/remote-service-context-2.xml</file>
+          <file>file://$MODULE_DIR$/spitter-service-declarative-tx/src/main/resources/service-context.xml</file>
+          <file>file://$MODULE_DIR$/remoting-clients/src/main/resources/remoting-client-context.xml</file>
+          <file>file://$MODULE_DIR$/remoting-jaxrpc/src/main/resources/remote-service-context.xml</file>
+          <file>file://$MODULE_DIR$/async/src/main/resources/async-context.xml</file>
+          <file>file://$MODULE_DIR$/spitter-persistence-hibernate-template/src/main/resources/persistence-context.xml</file>
+          <file>file://$MODULE_DIR$/spitter-persistence-jdbc-dao-support/src/test/resources/test-dataSource-context.xml</file>
+          <file>file://$MODULE_DIR$/spitter-persistence-jdbc-dao-support/src/test/resources/test-transaction-context.xml</file>
+          <file>file://$MODULE_DIR$/spitter-service-annotation-tx/src/main/resources/service-context.xml</file>
+          <file>file://$MODULE_DIR$/spitter-persistence-hibernate-template/src/test/resources/test-dataSource-context.xml</file>
+          <file>file://$MODULE_DIR$/jms/src/main/resources/messaging-context.xml</file>
+          <file>file://$MODULE_DIR$/remoting-jaxws/src/main/resources/remote-service-context.xml</file>
+          <file>file://$MODULE_DIR$/spitter-persistence-jdbc-template/src/main/resources/persistence-context.xml</file>
+          <file>file://$MODULE_DIR$/jms-rpc/src/main/resources/messaging-context.xml</file>
+          <file>file://$MODULE_DIR$/spitter-jmx/src/main/resources/jmx-context.xml</file>
+          <file>file://$MODULE_DIR$/spitter-jmx/src/main/resources/mbean-exporter-context.xml</file>
+          <file>file://$MODULE_DIR$/spitter-jmx/src/main/resources/mbean-exporter-context-basic.xml</file>
+          <file>file://$MODULE_DIR$/spitter-jmx/src/main/resources/method-exclusion-assembler.xml</file>
+          <file>file://$MODULE_DIR$/spitter-jmx/src/main/resources/method-name-based-assembler.xml</file>
+          <file>file://$MODULE_DIR$/spitter-jmx/src/main/resources/method-interface-based-assembler.xml</file>
+          <file>file://$MODULE_DIR$/spitter-jmx/src/main/resources/annotation-driven-mbean-context.xml</file>
+          <file>file://$MODULE_DIR$/spitter-persistence-jpa/src/main/resources/persistence-context.xml</file>
+          <file>file://$MODULE_DIR$/spitter-persistence-hibernate-contextual-sessions/src/test/resources/test-dataSource-context.xml</file>
+          <file>file://$MODULE_DIR$/spitter-persistence-hibernate-contextual-sessions/src/test/resources/test-transaction-context.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+    <facet type="jpa" name="JPA">
+      <configuration>
+        <setting name="validation-enabled" value="true" />
+        <setting name="provider-name" value="" />
+        <datasource-mapping />
+        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/spitter-domain-jpa/src/main/resources/META-INF/persistence.xml" />
+      </configuration>
+    </facet>
+  </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">

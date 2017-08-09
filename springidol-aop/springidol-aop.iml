@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/com/springinaction/springidol/spring-idol.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/com/springinaction/springidol/spring-idol-around.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/com/springinaction/springidol/sneaky-magician.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/com/springinaction/springidol/spring-idol-2.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-idol.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-idol-around.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/sneaky-magician.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/com/springinaction/springidol/spring-idol-introductions.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+  </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_6" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />

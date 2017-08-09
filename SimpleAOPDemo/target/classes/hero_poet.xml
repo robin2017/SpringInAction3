@@ -7,7 +7,8 @@
     <bean id="poet" class="com.robin.xml.beforeafter.Poet"/>
     <aop:config>
         <aop:aspect ref="poet">
-            <aop:pointcut id="doGoodPointcut" expression="execution(* com.robin.xml.beforeafter.Hero.helpPool()) ||
+            <aop:pointcut id="doGoodPointcut"
+                          expression="execution(* com.robin.xml.beforeafter.Hero.helpPool()) ||
              execution(* com.robin.xml.beforeafter.Hero.saveBeauty()) "/>
 
             <aop:before

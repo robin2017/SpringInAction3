@@ -1,0 +1,7 @@
+com/habuma/spitter/mvc/HomeControllerTest.class
+com/habuma/spitter/mvc/SpittleBackingBeanInterceptorTest.class
+com/habuma/spitter/mvc/MockBindingResultMaker.class
+com/habuma/spitter/mvc/FowardingControllerTest.class
+com/habuma/spitter/method/SecuredClass.class
+com/habuma/spitter/method/SecuredInterface.class
+com/habuma/spitter/method/Sensitive.class

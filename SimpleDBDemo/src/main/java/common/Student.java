@@ -1,10 +1,13 @@
 package common;
 
+import org.springframework.stereotype.Controller;
+
 /**
  * Created by robin on 2017/7/31.
  */
 
 public class Student {
+    Controller d;
     private int id;
     private String name;
     private String sex;

@@ -19,14 +19,6 @@ public class StudentDaoImpl implements StudentDao {
         this.dataSource=dataSource;
     }
 
-
-
-
-
-
-
-
-
     public Student getStudentById(int id) {
         Connection connection=null;
         PreparedStatement preparedStatement=null;
